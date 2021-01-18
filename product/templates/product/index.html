@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% load static %}
+{% load app_extras %}
+<link rel="stylesheet" href="{% static 'product/style.css'%}">
+<title>Bolem Venture</title>
+<style id="cart_content"></style>
+</head>
+<body>
+        <div class="product_categories">
+        {% for key, value in context.items %}
+            <div class="product_category" id={{ key|qouted_strings }}>
+        {% if value|length != 0 %}
+        {% for p in value %}
+               <div class="product_name" id={{ p.product_name|space_to_uscore|qouted_strings }}>
+                   <span class="product_price" id={{ p.product_price|qouted_strings }}></span>
+                   <span class="product_description" id={{ p.product_description|qouted_strings }}></span>
+                   <span class="product_photo" id={{ p.product_photo|qouted_strings }}></span>
+                   <span class="product_gender" id={{ p.gender|qouted_strings }}></span>
+               </div>
+        {% endfor %}
+        {% endif %}
+            </div>
+        {% endfor %}
+        </div>
+	<div class="wrapper">
+		<div class="nav_bar">
+			<img src="{% static 'product/logo.png'%}"></img>
+			<span id="cart_icon"></span>
+		</div>
+		<a href="#" class="Arrow_Left"></a>
+		<a href="#" class="Arrow_Right"></a>
+		<div class="product_wrapper">
+			<h3> Select A Category </h3>
+			<div class="product active" id="p1">
+				<h4 class="category">Clothing</h4>
+				<span class="a2"></span>
+				<span class="a1"></span>
+				<span class="a2"></span>
+				<span class="a1" id="s1"></span>
+				<div class="product_image"></div>
+				<p class="title">Clothing Title</p>
+				<p class="price">$18.99</p>
+				<a href="#">View More</a>
+				<span class="description_product"></span>
+			</div>
+			<div class="product" id="p2">
+				<h4 class="category">Accesories</h4>
+				<span class="a2"></span>
+				<span class="a1"></span>
+				<span class="a2" ></span>
+				<span class="a1" id="s1"></span>
+				<div class="product_image"></div>
+				<p class="title">Accesory Title</p>
+				<p class="price">$12.99</p>
+				<a href="#">View More</a>
+				<span class="description_product"></span>
+			</div>
+			<div class="product" id="p3">
+				<h4 class="category">Textiles</h4>
+				<span class="a2"></span>
+				<span class="a1"></span>
+				<span class="a2"></span>
+				<span class="a1" id="s1"></span>
+				<div class="product_image"></div>
+				<p class="title">Textile Title</p>
+				<p class="price">$7.99</p>
+				<a href="#">View More</a>
+				<span class="description_product"></span>
+			</div>
+		</div>
+		<div class="description_wrapper active">
+			<span class="a1" id="s2"></span>
+			<span class="a2"></span>
+			<span class="a1"></span>
+			<span class="a2"></span>
+			<h4> Product Description </h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum nulla sit amet molestie commodo. Morbi ut ligula justo. Integer nec nunc sapien.</p>
+			<div class="description_buttons">
+				<a href="#" id="cartbtn">Add To Cart</a>
+				<a href="#" id="buybtn">Buy Now</a>
+			</div>
+		</div>
+	</div>
+	<div id="overlay_wrapper">
+		<div id="shopping_wrapper">
+			<span id="exit"></span>
+			<h2> Shopping Cart </h2>
+			<div id="cart_wrapper">
+			</div>
+			<div id="payment_wrapper">
+				<span id="total_cost">Total: $0</span>
+				<div id="paypal-button-container"></div>
+			</div>
+		</div>
+		<div id="completed_wrapper">
+			<span id="exit"></span>
+			<h2> Transaction Completed </h2>
+		</div>
+	</div>
+<script src="{% static 'product/main.js'%}"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=AWICJkCziuVDPqcSxbVk7_9NXUmFc4RPH0AcgnB0VWFvZSiOY9cj90T5xuDvDwejPtnCuJ8i8X-4o8ld&disable-funding=credit,card""></script>
+</body>
+</html>
