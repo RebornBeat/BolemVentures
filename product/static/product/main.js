@@ -339,8 +339,8 @@ for ( i = 0; i < 3; i++) {
 		this_product = this;
 		if ( hovered == undefined || current_active != this ) {
 			clear_active();
-			document.querySelector('.description_wrapper h4').innerHTML = this.childNodes[13].innerHTML.replace(/_/g, " ");
-			document.querySelector('.description_wrapper p').innerHTML = this.childNodes[19].innerHTML;
+			document.querySelector('.description_wrapper h4').innerHTML = current_active.querySelector('.title').innerHTML.replace(/_/g, " ");
+			document.querySelector('.description_wrapper p').innerHTML = current_active.querySelector('.description_product').innerHTML;
 		}
 	});
 }
@@ -364,8 +364,8 @@ for ( i = 0; i < 3; i++) {
 		}
 		this_category = this;
 		display_arrows ();
-		document.querySelector('.description_wrapper h4').innerHTML = current_active.childNodes[13].innerHTML.replace(/_/g, " ");
-		document.querySelector('.description_wrapper p').innerHTML = current_active.childNodes[19].innerHTML;
+		document.querySelector('.description_wrapper h4').innerHTML = current_active.querySelector('.title').innerHTML.replace(/_/g, " ");
+		document.querySelector('.description_wrapper p').innerHTML = current_active.querySelector('.description_product').innerHTML;
 	});
 }
 
@@ -393,8 +393,8 @@ document.querySelector('.Arrow_Left').addEventListener('click', function() {
 		document.querySelector(`#p${product_iteration} .product_image`).style.backgroundSize = 'cover'
 	}
 	current_active = document.querySelector('.product.active');
-	document.querySelector('.description_wrapper h4').innerHTML = current_active.childNodes[13].innerHTML.replace(/_/g, " ");
-	document.querySelector('.description_wrapper p').innerHTML = current_active.childNodes[19].innerHTML;
+	document.querySelector('.description_wrapper h4').innerHTML = current_active.querySelector('.title').innerHTML.replace(/_/g, " ");
+	document.querySelector('.description_wrapper p').innerHTML = current_active.querySelector('.description_product').innerHTML;
 });
 
 document.querySelector('.Arrow_Right').addEventListener('click', function() {
@@ -415,8 +415,8 @@ document.querySelector('.Arrow_Right').addEventListener('click', function() {
 		document.querySelector(`#p${product_iteration} .product_image`).style.backgroundSize = 'cover'
 	}
 	current_active = document.querySelector('.product.active');
-	document.querySelector('.description_wrapper h4').innerHTML = current_active.childNodes[13].innerHTML.replace(/_/g, " ");
-	document.querySelector('.description_wrapper p').innerHTML = current_active.childNodes[19].innerHTML;
+	document.querySelector('.description_wrapper h4').innerHTML = current_active.querySelector('.title').innerHTML.replace(/_/g, " ");
+	document.querySelector('.description_wrapper p').innerHTML = current_active.querySelector('.description_product').innerHTML;
 });
 
 document.querySelector('#cartbtn').addEventListener('click', function() {
@@ -451,8 +451,8 @@ async function wait_hover () {
 			products = document.querySelectorAll('.product');
 			products[i].classList.add('active')
 			description.classList.add('active');
-			document.querySelector('.description_wrapper h4').innerHTML = products[i].childNodes[13].innerHTML;
-			document.querySelector('.description_wrapper p').innerHTML = products[i].childNodes[19].innerHTML;
+			document.querySelector('.description_wrapper h4').innerHTML = current_active.querySelector('.title').innerHTML.replace(/_/g, " ");
+			document.querySelector('.description_wrapper p').innerHTML = current_active.querySelector('.description_product').innerHTML;
 			await timer(2000);
 		}
 		

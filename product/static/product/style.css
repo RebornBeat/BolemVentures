@@ -89,6 +89,7 @@ h1 {
 }
 
 .product{
+	position: relative;
 	height: 80%;
 	margin-top: 6%;
 	width: 20%;
@@ -96,7 +97,6 @@ h1 {
 	align-items: center;
 	float: left;
 	background: #FFFBFB;
-	position: relative;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -121,6 +121,15 @@ h1 {
 
 .description_wrapper span {
 	position: absolute;
+}
+
+.product_description_wrapper{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 #s1 {
@@ -235,28 +244,25 @@ h1 {
 	margin-left: 0%;
 }
 
-#p1 .product_image {
+.product_image {
+	position: relative;
 	width: 100%;
-	height: 45%;
+	height: 50%;
+}
+
+#p1 .product_image {
 	background: url(Clothing.jpg) no-repeat;
 	background-size: cover;
-	position: absolute;
 }
 
 #p2 .product_image {
-	width: 100%;
-	height: 45%;
 	background: url(Accesories.jpg) no-repeat;
 	background-size: cover;
-	position: absolute;
 }
 
 #p3 .product_image {
-	width: 100%;
-	height: 45%;
 	background: url(Textiles.jpg) no-repeat;
 	background-size: cover;
-	position: absolute;
 }
 
 p {
@@ -264,18 +270,9 @@ p {
 	color: #3B1B5C;
 }
 
-.title {
-	margin-top: 65%;
-}
-
-.price {
-	margin-top: 5%;
-}
 
 .product a {
-	position: absolute;
-	margin-top: 5.5%;
-	margin-left: 24%;
+	position: relative;
 	background-color: #FFFBFB;
 	text-decoration: none;
 	color: #3B1B5C;
@@ -283,6 +280,13 @@ p {
 	border: solid;
 	text-align: center;
 	padding: 2px 2px;
+}
+
+.product_a_wrapper{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
 .product.active a { 
