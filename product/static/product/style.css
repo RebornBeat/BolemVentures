@@ -107,6 +107,10 @@ h1 {
 	color: #3B1B5C;
 }
 
+.category:hover{
+	cursor: pointer;
+}
+
 .category.active {
 	text-decoration: underline;
 }

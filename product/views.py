@@ -15,7 +15,7 @@ def index(request):
     categories = Category.objects.all()
     for i in categories:
         Prod = Product.objects.filter(category=i)
-        context[i.category_name] = Prod  
+        context[i.category_name] = Prod
     return render(request, 'product/index.html', {'context': context})
 
 def create(request):

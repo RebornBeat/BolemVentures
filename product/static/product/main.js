@@ -1,5 +1,5 @@
 const c_p_name = document.querySelector('#Clothing .product_name');
-const a_p_name = document.querySelector('#Accesories .product_name');
+const a_p_name = document.querySelector('#Accessories  .product_name');
 const t_p_name = document.querySelector('#Textiles .product_name');
 var categories = document.querySelectorAll('.product .category');
 const no_name = " No Items Found ";
@@ -125,7 +125,7 @@ function cart_count () {
 }
 
 function cart_count_active () {
-	let Product = current_active.childNodes[13].innerHTML
+	let Product = current_active.querySelector('.title').innerHTML
 	if ( Product != ' No Items Found ') {
 		if ( localStorage.getItem(Product) != null ) {
 			localStorage.setItem(Product, parseInt(localStorage.getItem(Product)) + 1);
@@ -149,6 +149,8 @@ function load_cart () {
 		if ( key == '__paypal_storage__' ) {
 			continue;
 		}
+		console.log(key)
+		console.log(`#${key.replace(/ /g, "_")}`)
 		let cP_Name = document.querySelector(`#${key.replace(/ /g, "_")}`);
 		let cartP = document.createElement("DIV");
 		let cartTR = document.createElement("DIV");
@@ -309,9 +311,9 @@ if (typeof(c_p_name) != 'undefined' && c_p_name != null) {
 
 if (typeof(a_p_name) != 'undefined' && a_p_name != null) {
 	document.querySelector('#p2 .title').innerHTML = a_p_name.getAttribute('id').replace(/_/g, " ");
-	document.querySelector('#p2 .price').innerHTML = ['$', document.querySelector('#Accesories .product_price').getAttribute('id')].join('');
-	document.querySelector('#p2 .description_product').innerHTML = document.querySelector('#Clothing .product_description').getAttribute('id');
-	document.querySelector('#p2 .product_image').style.background = `url(${document.querySelector('#Accesories .product_photo').getAttribute('id')} no-repeat`;
+	document.querySelector('#p2 .price').innerHTML = ['$', document.querySelector('#Accessories .product_price').getAttribute('id')].join('');
+	document.querySelector('#p2 .description_product').innerHTML = document.querySelector('#Accessories .product_description').getAttribute('id');
+	document.querySelector('#p2 .product_image').style.background = `url(${document.querySelector('#Accessories .product_photo').getAttribute('id')} no-repeat`;
 } else {
 	document.querySelector('#p2 .title').innerHTML = no_name;
 	document.querySelector('#p2 .price').innerHTML = no_price;
@@ -322,7 +324,7 @@ if (typeof(a_p_name) != 'undefined' && a_p_name != null) {
 if (typeof(t_p_name) != 'undefined' && t_p_name != null) {
 	document.querySelector('#p3 .title').innerHTML = t_p_name.getAttribute('id').replace(/_/g, " ");
 	document.querySelector('#p3 .price').innerHTML = ['$', document.querySelector('#Textiles  .product_price').getAttribute('id')].join('');
-	document.querySelector('#p3 .description_product').innerHTML = document.querySelector('#Clothing .product_description').getAttribute('id');
+	document.querySelector('#p3 .description_product').innerHTML = document.querySelector('#Textiles .product_description').getAttribute('id');
 	document.querySelector('#p3 .product_image').style.background = `url(${document.querySelector('#Textiles  .product_photo').getAttribute('id')} no-repeat`;
 } else {
 	document.querySelector('#p3 .title').innerHTML = no_name;
