@@ -1,7 +1,7 @@
 const c_p_name = document.querySelector('#Clothing .product_name');
 const a_p_name = document.querySelector('#Accessories  .product_name');
 const t_p_name = document.querySelector('#Textiles .product_name');
-var categories = document.querySelectorAll('.product .category');
+var categories = document.querySelectorAll('.category');
 const no_name = " No Items Found ";
 const no_price = " NA ";
 const no_description = " No Description Available, Item not found. ";
@@ -354,9 +354,9 @@ for ( i = 0; i < 3; i++) {
 		category_products = document.querySelectorAll(`#${current_category} .product_name`);
 		category_length = category_products.length;
 		if ( category_hovered == undefined || this_category != this) {
-			if (typeof(document.querySelector('.product .category.active')) != 'undefined' && document.querySelector('.product .category.active') != null) {
-				document.querySelector('.product .category.active').style.textDecoration = "none";
-				document.querySelector('.product .category.active').classList.remove('active');
+			if (typeof(document.querySelector('.category.active')) != 'undefined' && document.querySelector('.category.active') != null) {
+				document.querySelector('.category.active').style.textDecoration = "none";
+				document.querySelector('.category.active').classList.remove('active');
 			}	
 			this.classList.add('active');
 			this.style.textDecoration = "underline";

@@ -9,7 +9,7 @@
 <style id="cart_content"></style>
 </head>
 <body>
-        <div class="product_categories">
+     <div class="product_categories">
         {% for key, value in context.items %}
             <div class="product_category" id={{ key|qouted_strings }}>
         {% if value|length != 0 %}
@@ -24,63 +24,78 @@
         {% endif %}
             </div>
         {% endfor %}
-        </div>
+     </div>
+	 <div id="bg_wrapper"></div>
 	<div class="wrapper">
 		<div class="nav_bar">
 			<img src="{% static 'product/logo.png'%}"></img>
 			<span id="cart_icon"></span>
 		</div>
-		<a href="#" class="Arrow_Left"></a>
-		<a href="#" class="Arrow_Right"></a>
 		<h3> Select A Category </h3>
-		<div class="product_wrapper">
-			<div class="product active" id="p1">
+		<div id="title_container">
+			<div class="title_wrapper">
 				<h4 class="category">Clothing</h4>
-				<span class="a2"></span>
-				<span class="a1"></span>
-				<span class="a2"></span>
-				<span class="a1" id="s1"></span>
-				<div class="product_image"></div>
-				<div class="product_description_wrapper">
-					<p class="title">Clothing Title</p>
-					<p class="price">$18.99</p>
-					<div class="product_a_wrapper">
-						<a href="#">View More</a>
-					</div>
-					<span class="description_product"></span>
-				</div>
 			</div>
-			<div class="product" id="p2">
+			<div class="title_wrapper">
 				<h4 class="category">Accessories</h4>
-				<span class="a2"></span>
-				<span class="a1"></span>
-				<span class="a2" ></span>
-				<span class="a1" id="s1"></span>
-				<div class="product_image"></div>
-				<div class="product_description_wrapper">
-					<p class="title">Accesory Title</p>
-					<p class="price">$12.99</p>
-					<div class="product_a_wrapper">
-						<a href="#">View More</a>
+			</div>
+			<div class="title_wrapper">
+				<h4 class="category">Textiles</h4>
+			</div>
+		</div>
+		<div id="product_container">
+			<div id="left_arrow_container">
+				<a href="#" class="Arrow_Left"></a>
+			</div>
+			<div class="product_wrapper">
+				<div class="product active" id="p1">
+					<span class="a2"></span>
+					<span class="a1"></span>
+					<span class="a2"></span>
+					<span class="a1" id="s1"></span>
+					<div class="product_image"></div>
+					<div class="product_description_wrapper">
+						<p class="title">Clothing Title</p>
+						<p class="price">$18.99</p>
+						<div class="product_a_wrapper">
+							<a href="#">View More</a>
+						</div>
+						<span class="description_product"></span>
 					</div>
-					<span class="description_product"></span>
+				</div>
+				<div class="product" id="p2">
+					<span class="a2"></span>
+					<span class="a1"></span>
+					<span class="a2" ></span>
+					<span class="a1" id="s1"></span>
+					<div class="product_image"></div>
+					<div class="product_description_wrapper">
+						<p class="title">Accesory Title</p>
+						<p class="price">$12.99</p>
+						<div class="product_a_wrapper">
+							<a href="#">View More</a>
+						</div>
+						<span class="description_product"></span>
+					</div>
+				</div>
+				<div class="product" id="p3">
+					<span class="a2"></span>
+					<span class="a1"></span>
+					<span class="a2"></span>
+					<span class="a1" id="s1"></span>
+					<div class="product_image"></div>
+					<div class="product_description_wrapper">
+						<p class="title">Textile Title</p>
+						<p class="price">$7.99</p>
+						<div class="product_a_wrapper">
+							<a href="#">View More</a>
+						</div>
+						<span class="description_product"></span>
+					</div>
 				</div>
 			</div>
-			<div class="product" id="p3">
-				<h4 class="category">Textiles</h4>
-				<span class="a2"></span>
-				<span class="a1"></span>
-				<span class="a2"></span>
-				<span class="a1" id="s1"></span>
-				<div class="product_image"></div>
-				<div class="product_description_wrapper">
-					<p class="title">Textile Title</p>
-					<p class="price">$7.99</p>
-					<div class="product_a_wrapper">
-						<a href="#">View More</a>
-					</div>
-					<span class="description_product"></span>
-				</div>
+			<div id="right_arrow_container">
+				<a href="#" class="Arrow_Right"></a>
 			</div>
 		</div>
 		<div class="description_wrapper active">
