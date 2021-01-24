@@ -75,27 +75,25 @@ h1 {
 }
 
 .product_wrapper{
-	left: 17.5%;
-	width: 80%;
+	position: relative;
+	left: 15%;
+	width: 70%;
 	height: 40%;
 	top: 5%;
-	position: relative;
-	justify-content: center;
+	display: flex;
+	justify-content: space-between;
 }	
 
-.product_wrapper h3 {
-	margin-left: 32%;
+.wrapper h3 {
 	color: #3B1B5C;
+	text-align: center;
 }
 
-.product{
+.product {
 	position: relative;
 	height: 80%;
 	margin-top: 6%;
-	width: 20%;
-	margin-left: 10%;
-	align-items: center;
-	float: left;
+	width: 25%;
 	background: #FFFBFB;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
@@ -183,7 +181,7 @@ h1 {
 	margin-right: auto;
 	width: 40%;
 	height: 20%;
-	margin-top: 11%;
+	top: 17.5%;
 	position: relative;
 	background: #FFFBFB;
 	display: flex;
@@ -528,3 +526,95 @@ p {
 	transform: translate(-50%, -50%);
 	color: #3B1B5C;
 }
+
+@media only screen and (max-width: 1250px) and (min-device-width: 1000px){
+	
+	#cart_icon {
+		width: 7%;
+	}
+}
+
+@media only screen and (max-width: 999px) and (min-device-width: 565px){
+	
+	#cart_icon {
+		width: 9%;
+	}
+}
+
+@media only screen and (max-width: 564px) and (min-device-width: 415px){
+	
+	#cart_icon {
+		width: 15%;
+	}
+	
+}
+
+@media only screen and (max-width: 414px) and (min-device-width: 0px){
+	
+	#cart_icon {
+		width: 17.5%;
+	}
+}
+
+@media only screen and (max-width: 565px) and (min-device-width: 0px){
+	
+	.product_wrapper {
+		left: 0;
+		width: 100%;
+		justify-content: space-around;
+		top: 2.5%;
+	}
+	
+	.description_wrapper {
+		height: 30%;
+		width: 60%;
+		top: 12.5%;
+	}
+	
+
+}
+
+@media only screen and (max-width: 565px) and (min-device-width: 446px){
+	
+	.product {
+		width: 27.5%;
+		height: 100%;
+	}
+	
+}
+
+@media only screen and (max-width: 425px) and (min-device-width: 375px){
+	
+	.product {
+		width: 30%;
+		height: 100%;
+	}
+	
+	
+	.description_wrapper {
+		height: 25%;
+		width: 80%;
+		top: 17.5%;
+	}
+	
+}
+
+@media only screen and (max-width: 374px) and (min-device-width: 0px){
+	
+	.product {
+		width: 32.5%;
+		height: 100%;
+	}
+	
+	.product span {
+		display: none;
+	}
+	
+	.description_wrapper {
+		height: 25%;
+		width: 80%;
+		top: 17.5%;
+	}
+	
+}
+
